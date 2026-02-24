@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# Data / secrets
+data/
+.env
+*.json
+!pyproject.toml
+
+# Artifacts (screenshots, reports)
+artifacts/
+
+# IDE
+.idea/
+.vscode/
+*.swp

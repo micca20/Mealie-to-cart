@@ -1,0 +1,16 @@
+services:
+  mealie-to-cart:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: mealie-to-cart
+    environment:
+      - INFISICAL_URL=${INFISICAL_URL}
+      - INFISICAL_CLIENT_ID=${INFISICAL_CLIENT_ID}
+      - INFISICAL_CLIENT_SECRET=${INFISICAL_CLIENT_SECRET}
+      - INFISICAL_PROJECT_ID=340a0095-6c0d-4114-b19a-5b2eb4d60d30
+    volumes:
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
+    network_mode: bridge
+    restart: "no"

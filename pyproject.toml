@@ -1,0 +1,20 @@
+[project]
+name = "mealie-to-cart"
+version = "0.1.0"
+description = "Sync a Mealie shopping list (Walmart) into a Walmart grocery cart via Playwright + Browserless."
+requires-python = ">=3.11"
+dependencies = [
+  "requests>=2.31",
+  "playwright>=1.41",
+  "pytest>=8.0",
+]
+
+[tool.ruff]
+line-length = 100
+
+
+[project.scripts]
+mealie-to-cart = "mealie_to_cart.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["mealie_to_cart/tests"]
